@@ -57,3 +57,19 @@ func SaveURLMapping(shortURL string, originalURL string, userId string) {
 	}
 
 }
+
+/*
+We should be able to retrieve the initial long URL once the short
+is provided. This is when users will be calling the shortlink in the
+URL, so what we need to do here is to retrieve the long URL and
+think about redirect.
+*/
+func RetrieveInitialURL(shortURL string) string {
+	result, err := storeService.redisClient.Get(ctx, shortURL).Result()
+	if err != nil {
+		panic(fmt.Sprintf(
+			"Failed RetrieveInitialURL url | Error: %v - shortURL: %s\n",
+			err, shortURL))
+	}
+	return result
+}
