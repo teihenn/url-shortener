@@ -1,10 +1,11 @@
-module github.com/yo1956/url-shortener
+module github.com/teihenn/url-shortener
 
 go 1.22.2
 
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-redis/redis/v8 v8.11.5
+	github.com/itchyny/base58-go v0.2.2
 	github.com/stretchr/testify v1.9.0
 )
 
@@ -22,7 +23,6 @@ require (
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.20.0 // indirect
 	github.com/goccy/go-json v0.10.3 // indirect
-	github.com/itchyny/base58-go v0.2.2 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
